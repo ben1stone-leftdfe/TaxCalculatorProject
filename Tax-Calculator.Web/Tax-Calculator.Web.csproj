@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Tax_Calculator.Web</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tax-Calculator.Domain\Tax-Calculator.Domain.csproj" />
+    <ProjectReference Include="..\Tax-Calculator.Service\Tax-Calculator.Service.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,29 @@
+﻿@model Tax_Calculator.Web.ViewModels.CalculatorViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <p> Enter a positive number only </p>
+}
+
+<form method="post" asp-action="BadCalculator">
+    <label> Enter yearly salary </label>
+    <input asp-for="GrossPayInput" />
+    <button type="submit"> Bad Calculator </button>
+</form>
+
+<hr />
+
+<form method="post" asp-action="GoodCalculator">
+    <label> Enter yearly salary </label>
+    <input asp-for="GrossPayInput" />
+    <button type="submit"> Good Calculator </button>
+</form>
+
+
+@if (Model.CalculatorOutput != null)
+{
+    <p> Net pay = @Model.CalculatorOutput.NetPay</p>
+}
